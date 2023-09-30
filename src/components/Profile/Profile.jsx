@@ -5,8 +5,8 @@ export const Profile = ({user:{username, tag, location, avatar, stats}}) => {
       <Wrapper >
         <Description >
           <Avatar
-            src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-            alt={avatar}            
+            src={avatar}
+            alt={username}            
           />
           <UserName>{username}</UserName>
           <p >{'@'+tag}</p>

@@ -1,11 +1,13 @@
+import { Table, TableData, TableHead } from "./TransactionnHistory.styled";
+
 export const TransactionHistory = ({items}) => {
     return(
-<table className="transaction-history">
+<Table>
   <thead>
     <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
+      <TableHead>Type</TableHead>
+      <TableHead>Amount</TableHead>
+      <TableHead>Currency</TableHead>
     </tr>
   </thead>
 
@@ -14,27 +16,17 @@ export const TransactionHistory = ({items}) => {
       <TransactionItem key={item.id} item={item} /> 
     ))}
   </tbody>
-</table>
+</Table>
     )
 };
 
 const TransactionItem = ({item:{id, type, amount, currency}}) => {
     return(
         <tr key={id}>
-        <td>{type}</td>
-        <td>{amount}</td>
-        <td>{currency}</td>
+        <TableData>{type}</TableData>
+        <TableData>{amount}</TableData>
+        <TableData>{currency}</TableData>
         </tr>
     )
 };
 
-/* <tr>
-      <td>Invoice</td>
-      <td>125</td>
-      <td>USD</td>
-    </tr>
-    <tr>
-      <td>Withdrawal</td>
-      <td>85</td>
-      <td>USD</td>
-    </tr> */

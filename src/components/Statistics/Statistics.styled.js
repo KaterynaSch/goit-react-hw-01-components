@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import { border, greenColor } from "components/Profile/Profile.styled";
 
 export const SectionStat = styled.section`
-    width : 300px;   
-    padding-top: 28px;
-    border: 1px solid rgba(5, 5, 5, 0.20); 
+    width: 100%;   
+    padding-top: 28px; 
     border-top: none;
-    background-color: white;
+    border: ${border}; 
+       
 `
 export const StatisticsTitle = styled.h2`
     margin-bottom: 18px;
@@ -13,5 +14,5 @@ export const StatisticsTitle = styled.h2`
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #434455;
+    color: ${greenColor};
 `

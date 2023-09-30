@@ -1,4 +1,5 @@
-import { FriendAvatar, ListFriend, ListFriendItem } from "./FriendList.styled";
+import { ListFriend } from "./FriendList.styled";
+import { FriendListItem } from "components/FriendListItem/FriendListItem";
 
 export const FriendList = ({friends}) => {
     return (
@@ -10,16 +11,4 @@ export const FriendList = ({friends}) => {
 </ListFriend>
     )
 };
-
-const FriendListItem = ({id, avatar, name, isOnline}) => {
-    return(
-        <ListFriendItem key={id} online={isOnline}>
-        <span className="status">
-            {isOnline ? 'Online' : 'Offline'}
-        </span>
-        <FriendAvatar src={avatar} alt="User avatar" width="48" />
-        <p className="name">{name}</p>
-      </ListFriendItem>
-    )
-    }
 
